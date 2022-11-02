@@ -25,10 +25,14 @@ public class Block {
             }
 
         }
-        Arrays.sort(numbers);
+
     }
 
-
+    public Block (int... numbers){
+        this.numbers= numbers;  //Lo de los 3 puntos es para despues en
+        //el main ponerle muchos valores(ir al main para verlo)
+        Arrays.sort(this.numbers);
+    }
 
 
 private boolean isRepeatedNumber(int number){
@@ -41,10 +45,7 @@ for (int i= 0; i<numbers.length;i++){
 }return false;
     }
 
-    public Block (int... numbers){
-        this.numbers= numbers;  //Lo de los 3 puntos es para despues en
-        //el main ponerle muchos valores(ir al main para verlo)
-    }
+
 
     @Override
     public String toString() {
@@ -54,5 +55,9 @@ for (int i= 0; i<numbers.length;i++){
 
         }
         return string;
+    }
+
+    public int[] getNumbers(){
+        return numbers;
     }
 }
